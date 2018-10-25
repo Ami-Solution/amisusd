@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  entry: './app/main.js',
+  entry: './test/amisusd.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[hash].js'

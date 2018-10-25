@@ -65,7 +65,7 @@ contract('AMISUSD', function(accounts) {
     it("if the price of Ether doubles you should get back half as much Ether (the same amount in USD)",  async ()  => {
       await mockAmisPriceOracle.setPrice(30000);
       await ethUSD.issue({value: web3.toWei('1', 'ether')});
-      await mockEtherPriceOracle.setPrice(60000);
+      await mockAmisPriceOracle.setPrice(60000);
       const amountWithdrawn = await ethUSD.withdraw.call(30000);
       assert.equal(amountWithdrawn.toNumber(), web3.toWei('0.5', 'ether'));
     });

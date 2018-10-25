@@ -13,10 +13,10 @@
     "start1": "truffle serve",
     "prepare": "truffle compile && npm test && npm run lint && webpack --config ./webpack.config.js",
     "lint1": "eslint ./",
-    "build1": "webpack",
+    "build": "webpack --config ./webpack.config.js",
     "dev": "webpack-dev-server",
     "lint": "./node_modules/.bin/eslint ./",
-    "build": "./node_modules/.bin/webpack"
+    "build2": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -35,12 +35,11 @@
     "lodash": "*",
     "dotenv": "*",
     "solc": "*",
-    "truffle": "*"
+    "truffle": "^3.0.7"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
-
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -64,9 +63,8 @@
     "sass-loader": "^7.0.3",
     "source-map-support": "^0.5.3",
     "style-loader": "^0.21.0",
-    "truffle": "^4.1.13",
     "truffle-contract": "^3.0.6",
-    "web3": "^0.20.0",
+    "web3": "^1.0.0-beta.36",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.6",
     "webpack-dev-server": "^3.1.4",
