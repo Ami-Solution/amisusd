@@ -211,7 +211,7 @@
   {
     "inputs": [
       {
-        "name": "etherPriceOracleAddress",
+        "name": "amisPriceOracleAddress",
         "type": "address"
       }
     ],

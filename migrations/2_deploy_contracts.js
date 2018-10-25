@@ -1,4 +1,4 @@
-var EthUSD = artifacts.require("./EthUSD.sol");
+var AMISUSD = artifacts.require("./AMISUSD.sol");
 var MockEtherPriceOracle = artifacts.require("./MockEtherPriceOracle.sol");
 const priceOraclesByNework = {
   mainnet: "0xf5c600cda3b7289b2863872b23084527fb4c6107",
@@ -10,9 +10,9 @@ const priceOraclesByNework = {
 module.exports = function(deployer, network) {
   if (network == "development") {
     deployer.deploy(MockEtherPriceOracle).then(() => {
-      return deployer.deploy(EthUSD, MockEtherPriceOracle.address);
+      return deployer.deploy(AMISUSD, MockEtherPriceOracle.address);
     });
   } else {
-    deployer.deploy(EthUSD, priceOraclesByNework[network]);
+    deployer.deploy(AMISUSD, priceOraclesByNework[network]);
   }
 };

@@ -1,16 +1,16 @@
-pragma solidity ^0.4.15;
+pragma solidity ^0.4.23;
 
 import "./ERC20Token.sol";
-import "./EtherPriceOracleInterface.sol";
+import "./AmisPriceOracleInterface.sol";
 
-contract EthUSD is ERC20Token {
-  EtherPriceOracleInterface priceOracle;
-  string public constant symbol = "EthUSD";
-  string public constant name = "USD pegged Ether backed stablecoin";
+contract AMISUSD is ERC20Token {
+  AmisPriceOracleInterface priceOracle;
+  string public constant symbol = "AMISUSD";
+  string public constant name = "USD pegged AMIS backed stablecoin";
   uint8 public constant decimals = 2;
 
-  function EthUSD(address etherPriceOracleAddress) {
-    priceOracle = EtherPriceOracleInterface(etherPriceOracleAddress);
+  function AmisUSD(address etherPriceOracleAddress) {
+    priceOracle = AmisPriceOracleInterface(etherPriceOracleAddress);
   }
 
   function donate() payable {}
